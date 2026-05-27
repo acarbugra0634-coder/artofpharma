@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art of Pharma — Eczacılığın Sanatı</title>
+  <meta name="description" content="Türkiye'deki eczacılık fakültesi öğrencilerini, uzmanları ve toplulukları birbirine bağlayan bağımsız platform." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Art of Pharma — Eczacılığın Sanatı" />
+  <meta property="og:description" content="Türkiye'deki eczacılık fakültesi öğrencilerini, uzmanları ve toplulukları birbirine bağlayan bağımsız platform." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="<!-- BURAYA OG IMAGE URL GİRİN -->" />
+  <meta property="og:url" content="<!-- BURAYA SITE URL GİRİN -->" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Dancing+Script:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       STICKY NAVIGATION
+  ═══════════════════════════════════════ -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-container" aria-label="Ana navigasyon">
+      <!-- Logo -->
+      <a href="#hero" class="nav-logo" aria-label="Art of Pharma Ana Sayfa">
+        <img src="logo.png" alt="Art of Pharma logo" class="logo-icon" />
+        <span class="logo-text">ART OF PHARMA</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#hakkinda" class="nav-link" data-section="hakkinda">Hakkında</a></li>
+        <li><a href="#etkinlikler" class="nav-link" data-section="etkinlikler">Etkinlikler</a></li>
+        <li><a href="#founders-vision" class="nav-link" data-section="founders-vision">Founder’s Vision</a></li>
+        <li><a href="yonetim-kurulu.html" class="nav-link">Yönetim Kurulu</a></li>
+        <li><a href="#iletisim" class="nav-link" data-section="iletisim">İletişim</a></li>
+      </ul>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobil menü" aria-hidden="true">
+      <ul class="mobile-nav-links" role="list">
+        <li><a href="#hakkinda" class="mobile-nav-link">Hakkında</a></li>
+        <li><a href="#etkinlikler" class="mobile-nav-link">Etkinlikler</a></li>
+        <li><a href="#founders-vision" class="mobile-nav-link">Founder’s Vision</a></li>
+        <li><a href="yonetim-kurulu.html" class="mobile-nav-link">Yönetim Kurulu</a></li>
+        <li><a href="#iletisim" class="mobile-nav-link">İletişim</a></li>
+      </ul>
+      <div class="mobile-social">
+        <a href="https://www.instagram.com/artofpharma?igsh=MXAzMHFhNjY0azV0Zw%3D%3D&utm_source=qr" class="mobile-social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/artofpharma?utm_source=share_via&utm_content=profile&utm_medium=member_ios" class="mobile-social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://whatsapp.com/channel/0029Vb5EkwT5kg78F74vLk1h" class="mobile-social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.855L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.652-.49-5.187-1.346l-.371-.22-3.862 1.008 1.028-3.752-.241-.386A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════ -->
+    <section class="hero" id="hero" aria-label="Hero bölümü">
+      <div class="hero-bg-grid" aria-hidden="true"></div>
+      <div class="hero-noise" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <div class="hero-eyebrow fade-in-up" style="--delay: 0.1s">
+          <span class="hero-eyebrow-line" aria-hidden="true"></span>
+          <span>Türkiye · Azerbaycan · KKTC</span>
+          <span class="hero-eyebrow-line" aria-hidden="true"></span>
+        </div>
+
+        <div class="hero-title-wrap">
+          <h1 class="hero-title fade-in-up" style="--delay: 0.25s">
+            <span class="hero-title-line">ART</span>
+            <span class="hero-title-line hero-title-accent">OF</span>
+            <span class="hero-title-line">PHARMA</span>
+          </h1>
+          <p class="hero-script fade-in-up" style="--delay: 0.45s" aria-label="Tagline: Eczacılık Bir Sanattır.">
+            Eczacılık Bir Sanattır.
+          </p>
+        </div>
+
+        <p class="hero-desc fade-in-up" style="--delay: 0.6s">
+          Türkiye'deki eczacılık fakültesi öğrencilerini, uzmanları<br class="desktop-only" />
+          ve toplulukları birbirine bağlayan bağımsız platform.
+        </p>
+
+        <div class="hero-socials fade-in-up" style="--delay: 0.75s">
+          <a href="https://www.instagram.com/artofpharma?igsh=MXAzMHFhNjY0azV0Zw%3D%3D&utm_source=qr" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram — @artofpharma">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            <span>Instagram</span>
+          </a>
+          <a href="https://whatsapp.com/channel/0029Vb5EkwT5kg78F74vLk1h" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Kanalı">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.855L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.652-.49-5.187-1.346l-.371-.22-3.862 1.008 1.028-3.752-.241-.386A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            <span>WhatsApp Kanalı</span>
+          </a>
+          <a href="https://www.linkedin.com/in/artofpharma?utm_source=share_via&utm_content=profile&utm_medium=member_ios" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn — Art of Pharma">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <a href="#hakkinda" class="scroll-indicator" aria-label="Aşağı kaydır">
+        <span class="scroll-text">KEŞFET</span>
+        <svg class="scroll-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+      </a>
+
+      <!-- Decorative number -->
+      <span class="hero-deco-number" aria-hidden="true">6K+</span>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         HAKKINDA
+    ═══════════════════════════════════════ -->
+    <section class="section hakkinda" id="hakkinda" aria-label="Hakkında bölümü">
+
+      <!-- Section label -->
+      <div class="section-label reveal">
+        <span class="section-label-text">01 — HAKKINDA</span>
+        <span class="section-label-line" aria-hidden="true"></span>
+      </div>
+
+      <!-- Nedir? -->
+      <div class="nedir-block reveal">
+        <div class="nedir-text-col">
+          <h2 class="section-heading">NEDİR?</h2>
+          <p class="nedir-body">
+            Art of Pharma; Türkiye'deki farklı fakültedeki toplulukları, değerli öğrencileri ve alanında uzman eczacıları birbirleriyle buluşturmayı amaçlayan bir topluluk, organizasyon ve girişimdir.
+          </p>
+          <p class="nedir-body">
+            Eczacılığın sadece "eczane açmak"tan ibaret olmadığını gönüllü şekilde gösteren, kendini geliştirmeye çalışan tüm öğrencilere kapısını açan bir ailedir.
+          </p>
+        </div>
+        <div class="nedir-deco-col" aria-hidden="true">
+          <div class="nedir-deco-box">
+            <img src="logo.png" alt="Art of Pharma logo" class="nedir-caduceus-large" />
+            <div class="nedir-deco-word">BAĞIMSIZ</div>
+            <div class="nedir-deco-word nedir-deco-word--accent">TOPLULUK</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vizyon & Misyon -->
+      <div class="vm-block reveal">
+        <div class="vm-card vm-card--vizyon">
+          <div class="vm-card-label">VİZYONUMUZ</div>
+          <h3 class="vm-card-heading">Bağımsız<br/>Topluluk</h3>
+          <p class="vm-card-body">
+            Herhangi bir dernek ya da kuruluşa bağlı olmayan sosyal medya topluluğu. Türkiye, Azerbaycan ve Kıbrıs'tan <strong>50 temsilci</strong>, <strong>28 Yönetim Kurulu Üyesi</strong> ile büyüyen yapı.
+          </p>
+        </div>
+        <div class="vm-card vm-card--misyon">
+          <div class="vm-card-label">MİSYONUMUZ</div>
+          <h3 class="vm-card-heading">Her Gün<br/>Daha Fazla</h3>
+          <p class="vm-card-body">
+            Her gün daha fazla öğrenci ve eczacıya ulaşmak; kişisel gelişim, kariyer ve mesleki içerikler üretmek; eczacılığın zengin yelpazesini uzman ağızlardan aktarmak.
+          </p>
+        </div>
+      </div>
+
+      <!-- Stats Bar -->
+      <div class="stats-bar reveal" aria-label="İstatistikler">
+        <div class="stats-inner">
+          <div class="stat-item">
+            <span class="stat-number" data-target="6000" data-suffix="+">0</span>
+            <span class="stat-label">Instagram Takipçi</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true">·</div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="84.6" data-suffix="%" data-decimal="1">0</span>
+            <span class="stat-label">Eczacılık Öğrencisi</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true">·</div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="50" data-suffix="">0</span>
+            <span class="stat-label">Fakülte Temsilcisi<br/>TR / AZ / KKTC</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true">·</div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="28" data-suffix="">0</span>
+            <span class="stat-label">Yönetim Kurulu Üyesi</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true">·</div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="50" data-suffix="+">0</span>
+            <span class="stat-label">Ağırladığımız Konuşmacılar</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true">·</div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="7" data-suffix="">0</span>
+            <span class="stat-label">RADIX Dergi Sayısı</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true">·</div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="20" data-suffix="+">0</span>
+            <span class="stat-label">Anlaştığımız Markalar</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         ETKİNLİKLER
+    ═══════════════════════════════════════ -->
+    <section class="section etkinlikler" id="etkinlikler" aria-label="Etkinlikler bölümü">
+
+      <div class="section-label reveal">
+        <span class="section-label-text">02 — ETKİNLİKLER</span>
+        <span class="section-label-line" aria-hidden="true"></span>
+      </div>
+
+      <div class="etkinlik-header reveal">
+        <h2 class="section-heading">ETKİNLİKLER</h2>
+        <p class="section-subheading">Geçmişten bugüne, sahne aldığımız tüm platformlar.</p>
+      </div>
+
+      <!-- Tab Navigation -->
+      <div class="etkinlik-tabs reveal" role="tablist" aria-label="Etkinlik kategorileri">
+        <button
+          class="etkinlik-tab active"
+          id="tab-gecmis"
+          role="tab"
+          aria-selected="true"
+          aria-controls="panel-gecmis"
+          data-tab="gecmis"
+        >
+          Geçmiş Etkinlikler
+        </button>
+        <button
+          class="etkinlik-tab"
+          id="tab-yaklaşan"
+          role="tab"
+          aria-selected="false"
+          aria-controls="panel-yaklaşan"
+          data-tab="yaklaşan"
+        >
+          Yaklaşan Etkinlikler
+        </button>
+      </div>
+
+      <!-- Panel: Geçmiş -->
+      <div class="etkinlik-panel active" id="panel-gecmis" role="tabpanel" aria-labelledby="tab-gecmis">
+        <div class="etkinlik-grid">
+
+          <!-- ONPHAKON I -->
+          <article class="etkinlik-kart reveal" aria-label="ONPHAKON I">
+            <div class="kart-header">
+              <span class="kart-badge">KONGRE</span>
+              <span class="kart-tarih">1–6 Kasım 2024</span>
+            </div>
+            <h3 class="kart-baslik">ONPHAKON I</h3>
+            <p class="kart-alt-baslik">Online Eczacılık Kongresi</p>
+            <p class="kart-aciklama">
+              Türkiye'nin eczacılık öğrencilerini ilk kez bu ölçekte bir araya getiren çevrimiçi kongre.
+            </p>
+            <div class="kart-stats">
+              <div class="kart-stat">
+                <span class="kart-stat-val">6</span>
+                <span class="kart-stat-key">Gün</span>
+              </div>
+              <div class="kart-stat">
+                <span class="kart-stat-val">8</span>
+                <span class="kart-stat-key">Oturum</span>
+              </div>
+              <div class="kart-stat">
+                <span class="kart-stat-val">8</span>
+                <span class="kart-stat-key">Konuşmacı</span>
+              </div>
+              <div class="kart-stat">
+                <span class="kart-stat-val">1.226</span>
+                <span class="kart-stat-key">Kayıt</span>
+              </div>
+            </div>
+            <p class="kart-detail">300–350 katılımcı / oturum · 5 üniversite topluluğu</p>
+          </article>
+
+          <!-- ONPHAKON II -->
+          <article class="etkinlik-kart reveal" aria-label="ONPHAKON II">
+            <div class="kart-header">
+              <span class="kart-badge">KONGRE</span>
+              <span class="kart-tarih">27–29 Kasım 2025</span>
+            </div>
+            <h3 class="kart-baslik">ONPHAKON II</h3>
+            <p class="kart-alt-baslik">Online Eczacılık Kongresi</p>
+            <p class="kart-aciklama">
+              Daha geniş program, daha fazla konuşmacı, daha derin içerik. Part II güçlenmiş kadrosuyla.
+            </p>
+            <div class="kart-stats">
+              <div class="kart-stat">
+                <span class="kart-stat-val">3</span>
+                <span class="kart-stat-key">Gün</span>
+              </div>
+              <div class="kart-stat">
+                <span class="kart-stat-val">15</span>
+                <span class="kart-stat-key">Oturum</span>
+              </div>
+              <div class="kart-stat">
+                <span class="kart-stat-val">19</span>
+                <span class="kart-stat-key">Konuşmacı</span>
+              </div>
+              <div class="kart-stat">
+                <span class="kart-stat-val">1.225</span>
+                <span class="kart-stat-key">Kayıt</span>
+              </div>
+            </div>
+            <p class="kart-detail">300–350 katılımcı / oturum · 5 üniversite topluluğu</p>
+          </article>
+
+          <!-- Talks of Pharma -->
+          <article class="etkinlik-kart reveal" aria-label="Talks of Pharma">
+            <div class="kart-header">
+              <span class="kart-badge kart-badge--ongoing">WEBINAR</span>
+              <span class="kart-tarih">Webinar Serisi</span>
+            </div>
+            <h3 class="kart-baslik">TALKS OF PHARMA</h3>
+            <p class="kart-alt-baslik">Webinar Serisi</p>
+            <p class="kart-aciklama">
+              Eczacılığın farklı alanlarından uzmanları, öğrencilerle buluşturan süregelen webinar serisi.
+            </p>
+            <div class="kart-stats">
+              <div class="kart-stat">
+                <span class="kart-stat-val">19+</span>
+                <span class="kart-stat-key">Konuşmacı</span>
+              </div>
+              <div class="kart-stat">
+                <span class="kart-stat-val">150–200</span>
+                <span class="kart-stat-key">Kayıt/Oturum</span>
+              </div>
+              <div class="kart-stat">
+                <span class="kart-stat-val">90–100</span>
+                <span class="kart-stat-key">Katılımcı</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- RADIX Dergisi -->
+          <article class="etkinlik-kart etkinlik-kart--wide reveal" aria-label="RADIX Dergisi">
+            <div class="kart-header">
+              <span class="kart-badge kart-badge--yayin">YAYIN</span>
+              <span class="kart-tarih">7 Sayı Yayınlandı</span>
+            </div>
+            <h3 class="kart-baslik">RADIX DERGİSİ</h3>
+            <p class="kart-alt-baslik">Art of Pharma'nın Resmi Yayın Organı</p>
+            <p class="kart-aciklama">
+              Mesleki gelişim, kariyer ve eczacılık kültürü üzerine derinlemesine içerikler.
+            </p>
+            <div class="radix-sayilar">
+              <a href="https://online.fliphtml5.com/kifds/vsjm/" class="radix-sayi" target="_blank" rel="noopener noreferrer" aria-label="RADIX Ekim 2024 sayısını aç">Ekim 2024</a>
+              <a href="https://online.fliphtml5.com/kifds/bjvm/" class="radix-sayi" target="_blank" rel="noopener noreferrer" aria-label="RADIX Aralık 2024 sayısını aç">Aralık 2024</a>
+              <a href="https://online.fliphtml5.com/kifds/ggvo/" class="radix-sayi" target="_blank" rel="noopener noreferrer" aria-label="RADIX Şubat 2025 sayısını aç">Şubat 2025</a>
+              <a href="https://online.fliphtml5.com/kifds/teim/" class="radix-sayi" target="_blank" rel="noopener noreferrer" aria-label="RADIX Mayıs 2025 sayısını aç">Mayıs 2025</a>
+              <a href="https://online.fliphtml5.com/kifds/jjva/" class="radix-sayi" target="_blank" rel="noopener noreferrer" aria-label="RADIX Ağustos 2025 sayısını aç">Ağustos 2025</a>
+              <a href="https://online.fliphtml5.com/kifds/djnu/" class="radix-sayi" target="_blank" rel="noopener noreferrer" aria-label="RADIX Mart 2026 sayısını aç">Mart 2026</a>
+            </div>
+          </article>
+
+          <!-- Pharma Connect -->
+          <article class="etkinlik-kart reveal" aria-label="Pharma Connect">
+            <div class="kart-header">
+              <span class="kart-badge kart-badge--yüzyüze">YÜZ YÜZE</span>
+              <span class="kart-tarih">4 Kampüs</span>
+            </div>
+            <h3 class="kart-baslik">PHARMA CONNECT</h3>
+            <p class="kart-alt-baslik">Kampüs Buluşmaları</p>
+            <p class="kart-aciklama">
+              Farklı okullarda, eczacılığın farklı alanlarını tanıtmaya çalıştığımız konferans serisidir.
+            </p>
+            <div class="pharma-connect-lokasyonlar">
+              <div class="lokasyon-item">
+                <div class="lokasyon-info">
+                  <span class="lokasyon-okul">Ankara Medipol Üniversitesi</span>
+                  <span class="lokasyon-kulup">MEDPHA</span>
+                </div>
+                <span class="lokasyon-sayi">100+ katılımcı</span>
+              </div>
+              <div class="lokasyon-item">
+                <div class="lokasyon-info">
+                  <span class="lokasyon-okul">İstanbul Aydın Üniversitesisi</span>
+                  <span class="lokasyon-kulup">PharmAydın</span>
+                </div>
+                <span class="lokasyon-sayi">150+ katılımcı</span>
+              </div>
+              <div class="lokasyon-item">
+                <div class="lokasyon-info">
+                  <span class="lokasyon-okul">Erciyes Üniversitesi</span>
+                  <span class="lokasyon-kulup">ERCUPSA</span>
+                </div>
+                <span class="lokasyon-sayi">100+ katılımcı</span>
+              </div>
+              <div class="lokasyon-item">
+                <div class="lokasyon-info">
+                  <span class="lokasyon-okul">Hacettepe Üniversitesi</span>
+                  <span class="lokasyon-kulup">Hacettepe TEBGK</span>
+                </div>
+                <span class="lokasyon-sayi">100+ katılımcı</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Stant Açılışları -->
+          <article class="etkinlik-kart reveal" aria-label="Stant Açılışları">
+            <div class="kart-header">
+              <span class="kart-badge kart-badge--stant">STANT</span>
+              <span class="kart-tarih">4 Etkinlik</span>
+            </div>
+            <h3 class="kart-baslik">STANT AÇILIŞLARI</h3>
+            <p class="kart-alt-baslik">Tanıtım Stantları</p>
+            <p class="kart-aciklama">
+              Davet edildiğimiz ve stant açarak kendimizi tanıtmamıza olanak sağlanan etkinlikler.
+            </p>
+            <div class="stant-listesi">
+              <div class="stant-item">
+                <span class="stant-okul">İstanbul Üniversitesi</span>
+                <span class="stant-etkinlik">EcoFEST</span>
+              </div>
+              <div class="stant-item">
+                <span class="stant-okul">İstanbul Sağlık ve Teknoloji Üniversitesi</span>
+                <span class="stant-etkinlik">DermoVision</span>
+              </div>
+              <div class="stant-item">
+                <span class="stant-okul">Kahramanmaraş</span>
+                <span class="stant-etkinlik">PharMaraş</span>
+              </div>
+              <div class="stant-item">
+                <span class="stant-okul">Erciyes Üniversitesi</span>
+                <span class="stant-etkinlik">PharmErciyes II</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Women in Progress -->
+          <article class="etkinlik-kart reveal" aria-label="Women in Progress">
+            <div class="kart-header">
+              <span class="kart-badge kart-badge--özel">ÖZEL GÜN</span>
+              <span class="kart-tarih">8 Mart</span>
+            </div>
+            <h3 class="kart-baslik">WOMEN IN PROGRESS</h3>
+            <p class="kart-alt-baslik">8 Mart Etkinliği</p>
+            <p class="kart-aciklama">
+              Her yıl 8 Mart'ta eczacılıkta kadın seslerini öne çıkaran özel etkinlik.
+            </p>
+            <div class="wip-edisyonlar">
+              <div class="wip-edisyon">
+                <span class="wip-yil">8 Mart 2025</span>
+                <span class="wip-detay">3 eczacı + 3 öğrenci eczacı</span>
+              </div>
+              <div class="wip-edisyon">
+                <span class="wip-yil">8 Mart 2026</span>
+                <span class="wip-detay">4 eczacı + 3 öğrenci eczacı</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pharmotive -->
+          <article class="etkinlik-kart etkinlik-kart--featured reveal" aria-label="Pharmotive">
+            <div class="kart-header">
+              <span class="kart-badge kart-badge--öne-çıkan">ÖNE ÇIKAN</span>
+              <span class="kart-tarih">14 Mart 2026</span>
+            </div>
+            <h3 class="kart-baslik">PHARMOTIVE</h3>
+            <p class="kart-alt-baslik">Türkiye'de Bir İlk — "Eczacılığın TEDx'i"</p>
+            <p class="kart-aciklama">
+              Ankara Üniversitesi Eczacılık Fakültesi 50. Yıl Konferans Salonu'nda gerçekleştirilen, alanında Türkiye'de bir ilk olan yüz yüze etkinlik.
+            </p>
+            <div class="pharmotive-detay">
+              <div class="pharmotive-item">
+                <strong>Konuklar:</strong> Uzm. Ecz. Gülsüm Gençaslan Atasoy &amp; Ecz. Elif Aksen
+              </div>
+              <div class="pharmotive-item">
+                <strong>İşbirliği:</strong> MGİT — Ankara Üniversitesi
+              </div>
+            </div>
+            <div class="pharmotive-tag">TÜRKİYE'DE BİR İLK</div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Panel: Yaklaşan -->
+      <div class="etkinlik-panel" id="panel-yaklaşan" role="tabpanel" aria-labelledby="tab-yaklaşan">
+        <div class="yaklaşan-empty reveal">
+          <div class="yaklaşan-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="16" width="48" height="40" rx="4" stroke="#E84118" stroke-width="2.5"/>
+              <path d="M8 26h48" stroke="#E84118" stroke-width="2.5"/>
+              <rect x="20" y="8" width="4" height="12" rx="2" fill="#E84118"/>
+              <rect x="40" y="8" width="4" height="12" rx="2" fill="#E84118"/>
+              <circle cx="32" cy="42" r="8" stroke="#E84118" stroke-width="2"/>
+              <path d="M32 38v5l3 2" stroke="#E84118" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="yaklaşan-title">YAKINDA DUYURULACAK</h3>
+          <p class="yaklaşan-desc">Yeni etkinliklerimiz için sosyal medyamızı takip edin.</p>
+          <a href="https://www.instagram.com/artofpharma?igsh=MXAzMHFhNjY0azV0Zw%3D%3D&utm_source=qr" class="btn-primary" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            Takipte Kal
+          </a>
+        </div>
+
+        <!--
+        YAKLAŞAN ETKİNLİK KARTI PLACEHOLDER
+        Aşağıdaki bloku uncomment edip doldurun:
+
+        <div class="etkinlik-grid">
+          <article class="etkinlik-kart reveal">
+            <div class="kart-header">
+              <span class="kart-badge">ETİKET</span>
+              <span class="kart-tarih">TARİH</span>
+            </div>
+            <h3 class="kart-baslik">ETKİNLİK ADI</h3>
+            <p class="kart-alt-baslik">Alt başlık</p>
+            <p class="kart-aciklama">Açıklama metni buraya gelecek.</p>
+          </article>
+        </div>
+        -->
+      </div>
+
+    </section>
+
+
+
+    <!-- ═══════════════════════════════════════
+         FOUNDER'S VISION
+    ═══════════════════════════════════════ -->
+    <section class="section founders-vision" id="founders-vision" aria-label="Founder’s Vision bölümü">
+      <div class="section-label reveal">
+        <span class="section-label-text">03 — FOUNDER’S VISION</span>
+        <span class="section-label-line" aria-hidden="true"></span>
+      </div>
+
+      <div class="founder-hero reveal">
+        <div class="founder-kicker">Art of Pharma’nın arkasındaki vizyon</div>
+        <h2 class="founder-title">Bir topluluk değil, eczacılığın geleceğine açılan yaratıcı bir sahne.</h2>
+        <p class="founder-lead">
+          Art of Pharma; eczacılığın yalnızca bir meslek değil, bilim, iletişim, üretim, organizasyon ve vizyon gerektiren çok yönlü bir alan olduğunu göstermek için doğdu.
+        </p>
+      </div>
+
+      <div class="founder-grid reveal">
+        <div class="founder-profile-card">
+          <div class="founder-profile-mark">BA</div>
+          <div>
+            <h3>Buğra Acar</h3>
+            <p>Eczacılık Öğrencisi · Community Founder · Organizasyon Lideri</p>
+          </div>
+        </div>
+
+        <div class="founder-story">
+          <p>
+            Ankara Medipol Üniversitesi İngilizce Eczacılık Programı öğrencisi olan Buğra Acar, akademik gelişimini girişimci bakış açısıyla birleştirerek eczacılığın farklı alanlarını öğrencilerle buluşturmayı hedefliyor.
+          </p>
+          <p>
+            Kurduğu Art of Pharma; bilimsel içerikleri, kongreleri, webinarları, dergi yayıncılığını ve kampüs buluşmalarını aynı çatı altında toplayan bağımsız bir öğrenci hareketi olarak büyüyor.
+          </p>
+        </div>
+      </div>
+
+      <div class="founder-manifesto reveal">
+        <span class="founder-manifesto-label">Manifesto</span>
+        <p>
+          “Eczacılık bir sanattır; çünkü bilgi kadar yorum, sistem kadar vizyon, meslek kadar insan ilişkisi gerektirir.”
+        </p>
+      </div>
+
+      <div class="founder-timeline reveal" aria-label="Kurucu yolculuğu">
+        <div class="founder-timeline-item">
+          <span class="founder-year">2024 — Günümüz</span>
+          <h3>Art of Pharma Kurucusu &amp; YK Başkanı</h3>
+          <p>Türkiye, Azerbaycan ve KKTC’deki eczacılık öğrencilerini; içerik, etkinlik, yayın ve profesyonel ağ üretimiyle buluşturan bağımsız topluluk yapısı.</p>
+        </div>
+        <div class="founder-timeline-item">
+          <span class="founder-year">2024 — 2025</span>
+          <h3>ONPHAKON I &amp; II Lider Organizasyon</h3>
+          <p>Farklı üniversite topluluklarını bir araya getiren online eczacılık kongreleriyle geniş katılımlı ulusal organizasyonlar.</p>
+        </div>
+        <div class="founder-timeline-item">
+          <span class="founder-year">2024 — 2026</span>
+          <h3>RADIX, Talks of Pharma &amp; Pharma Connect</h3>
+          <p>Dergi editörlüğü, webinar serileri ve kampüs buluşmalarıyla eczacılığın farklı alanlarını öğrenciler için daha görünür hale getiren projeler.</p>
+        </div>
+        <div class="founder-timeline-item">
+          <span class="founder-year">Yetkinlikler</span>
+          <h3>Organizasyon · Ekip · Medya · Network</h3>
+          <p>Organizasyon yönetimi, ekip yönetimi, medya tasarımı, çözüm odaklı düşünme, içerik üretimi ve güçlü network kurma yaklaşımı.</p>
+        </div>
+      </div>
+
+      <div class="founder-highlights reveal">
+        <div class="founder-highlight">
+          <span>01</span>
+          <strong>Community-first</strong>
+          <p>Topluluğu kişisel vitrin değil, öğrenciler ve sektör arasında gerçek bir köprü olarak konumlandırır.</p>
+        </div>
+        <div class="founder-highlight">
+          <span>02</span>
+          <strong>Bilim + iletişim</strong>
+          <p>Bilimsel içeriği daha erişilebilir, daha estetik ve daha konuşulabilir hale getirmeyi amaçlar.</p>
+        </div>
+        <div class="founder-highlight">
+          <span>03</span>
+          <strong>Gelecek vizyonu</strong>
+          <p>Eczacılığın eczane dışındaki alanlarını görünür kılarak öğrencilerin kariyer ufkunu genişletir.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         İLETİŞİM
+    ═══════════════════════════════════════ -->
+    <section class="section iletisim" id="iletisim" aria-label="İletişim bölümü">
+
+      <div class="section-label reveal">
+        <span class="section-label-text">04 — İLETİŞİM</span>
+        <span class="section-label-line" aria-hidden="true"></span>
+      </div>
+
+      <div class="iletisim-header reveal">
+        <h2 class="section-heading">BİZE ULAŞIN</h2>
+        <p class="iletisim-note">
+          Etkinlik önerileri, iş birlikleri veya topluluğa katılmak için sosyal medya kanallarımızdan bize ulaşabilirsiniz.
+        </p>
+      </div>
+
+      <div class="iletisim-grid reveal">
+
+        <a href="https://www.instagram.com/artofpharma?igsh=MXAzMHFhNjY0azV0Zw%3D%3D&utm_source=qr" class="iletisim-kanal" target="_blank" rel="noopener noreferrer" aria-label="Instagram — @artofpharma">
+          <div class="kanal-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          <div class="kanal-info">
+            <span class="kanal-platform">Instagram</span>
+            <span class="kanal-handle">@artofpharma</span>
+          </div>
+          <div class="kanal-arrow" aria-hidden="true">→</div>
+        </a>
+
+        <a href="https://youtube.com/@artofpharma?si=awutiQoKiTyOL_uQ" class="iletisim-kanal" target="_blank" rel="noopener noreferrer" aria-label="YouTube — Art of Pharma">
+          <div class="kanal-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 001.95-1.97A29 29 0 0023 12a29 29 0 00-.46-5.58z"/>
+              <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0D0D0D"/>
+            </svg>
+          </div>
+          <div class="kanal-info">
+            <span class="kanal-platform">YouTube</span>
+            <span class="kanal-handle">Art of Pharma</span>
+          </div>
+          <div class="kanal-arrow" aria-hidden="true">→</div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/artofpharma?utm_source=share_via&utm_content=profile&utm_medium=member_ios" class="iletisim-kanal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn — Art of Pharma">
+          <div class="kanal-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </div>
+          <div class="kanal-info">
+            <span class="kanal-platform">LinkedIn</span>
+            <span class="kanal-handle">Art of Pharma</span>
+          </div>
+          <div class="kanal-arrow" aria-hidden="true">→</div>
+        </a>
+
+        <a href="https://whatsapp.com/channel/0029Vb5EkwT5kg78F74vLk1h" class="iletisim-kanal" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Kanalı">
+          <div class="kanal-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.855L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.652-.49-5.187-1.346l-.371-.22-3.862 1.008 1.028-3.752-.241-.386A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+            </svg>
+          </div>
+          <div class="kanal-info">
+            <span class="kanal-platform">WhatsApp</span>
+            <span class="kanal-handle">Art of Pharma Kanalı</span>
+          </div>
+          <div class="kanal-arrow" aria-hidden="true">→</div>
+        </a>
+
+      </div>
+
+      
+      <div class="representative-cta reveal">
+        <div class="representative-cta-copy">
+          <span class="representative-eyebrow">Kampüs ağımıza katıl</span>
+          <h3>Üniversite Temsilciliği Başvurusu</h3>
+          <p>Art of Pharma’nın kampüs yapılanmasında yer almak ve kendi üniversitende topluluğu temsil etmek için başvur.</p>
+        </div>
+        <a href="https://forms.gle/fNePJNgjcEmhj9Sg9" class="representative-btn" target="_blank" rel="noopener noreferrer" aria-label="Üniversite Temsilciliği Başvuru Formu">
+          Başvuru Formuna Git
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="support-mail-card reveal">
+        <a href="mailto:support@artofpharma.net" class="support-mail-link" aria-label="Art of Pharma destek mail adresine e-posta gönder">
+          <div class="support-mail-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 18h44v30H10V18z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M11 20l21 16 21-16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M45 12l2.2 4.8L52 19l-4.8 2.2L45 26l-2.2-4.8L38 19l4.8-2.2L45 12z" fill="currentColor"/>
+              <path d="M18 8l1.4 3.1 3.1 1.4-3.1 1.4L18 17l-1.4-3.1-3.1-1.4 3.1-1.4L18 8z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="support-mail-info">
+            <span class="support-mail-label">Mail yoluyla ulaşın</span>
+            <span class="support-mail-address">support@artofpharma.net</span>
+          </div>
+          <span class="support-mail-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="logo.png" alt="Art of Pharma logo" class="footer-logo-icon" />
+        <span class="footer-logo-text">ART OF PHARMA</span>
+      </div>
+
+      <p class="footer-copy">© 2026 Art of Pharma. Tüm hakları saklıdır.</p>
+
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/artofpharma?igsh=MXAzMHFhNjY0azV0Zw%3D%3D&utm_source=qr" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://youtube.com/@artofpharma?si=awutiQoKiTyOL_uQ" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 001.95-1.97A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0D0D0D"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/artofpharma?utm_source=share_via&utm_content=profile&utm_medium=member_ios" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://whatsapp.com/channel/0029Vb5EkwT5kg78F74vLk1h" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.855L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.652-.49-5.187-1.346l-.371-.22-3.862 1.008 1.028-3.752-.241-.386A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Magical Cursor (Desktop Only) -->
+  <div class="magic-cursor" aria-hidden="true"></div>
+  <div class="magic-cursor-dot" aria-hidden="true"></div>
+
+  <script src="main.js"></script>
+
+  <!-- Mobile Bottom Navigation -->
+  <nav class="mobile-bottom-nav" aria-label="Mobil hızlı navigasyon">
+    <a href="#hakkinda" class="mobile-bottom-link">
+      <span>01</span>
+      Hakkında
+    </a>
+    <a href="#etkinlikler" class="mobile-bottom-link">
+      <span>02</span>
+      Etkinlik
+    </a>
+    <a href="#founders-vision" class="mobile-bottom-link">
+      <span>03</span>
+      Founder
+    </a>
+    <a href="#iletisim" class="mobile-bottom-link">
+      <span>04</span>
+      İletişim
+    </a>
+  </nav>
+
+</body>
+</html>
