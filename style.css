@@ -2520,3 +2520,173 @@ button {
     font-size: 1.2rem;
   }
 }
+
+
+/* ═══════════════════════════════════════════════
+   HOME DIRECTORY LINKS
+═══════════════════════════════════════════════ */
+.home-directory-links {
+  max-width: 1280px;
+  margin: clamp(2rem, 5vw, 4rem) auto 0;
+  padding: 0 var(--section-px);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+@media (min-width: 768px) {
+  .home-directory-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.directory-card {
+  position: relative;
+  min-height: 230px;
+  padding: clamp(1.45rem, 4vw, 2.4rem);
+  background:
+    linear-gradient(135deg, rgba(245,243,238,0.035), rgba(245,243,238,0.01)),
+    var(--near-black);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.directory-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(232,65,24,0.18), transparent 28rem),
+    linear-gradient(90deg, transparent, rgba(232,65,24,0.09), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-mid);
+  pointer-events: none;
+}
+
+.directory-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-mid);
+}
+
+.directory-card:hover {
+  transform: translateY(-3px);
+  background:
+    linear-gradient(135deg, rgba(232,65,24,0.12), rgba(245,243,238,0.025)),
+    #151515;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.24);
+}
+
+.directory-card:hover::before {
+  opacity: 1;
+}
+
+.directory-card:hover::after {
+  transform: scaleX(1);
+}
+
+.directory-index {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.35rem;
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 5.2rem);
+  line-height: 0.8;
+  color: rgba(232,65,24,0.20);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.directory-card:hover .directory-index {
+  color: rgba(232,65,24,0.42);
+  transform: translateY(-2px);
+}
+
+.directory-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+  padding-right: 4rem;
+}
+
+.directory-kicker {
+  color: var(--orange);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+}
+
+.directory-copy h3 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  line-height: 0.92;
+  letter-spacing: 0.035em;
+  color: var(--light-text);
+  margin-bottom: 0.8rem;
+}
+
+.directory-copy p:last-child {
+  color: rgba(245,243,238,0.58);
+  font-size: 0.94rem;
+  line-height: 1.7;
+}
+
+.directory-action {
+  position: relative;
+  z-index: 1;
+  color: var(--light-text);
+  font-size: 0.78rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  transition: color var(--transition-fast);
+}
+
+.directory-action span {
+  color: var(--orange);
+  transition: transform var(--transition-fast);
+}
+
+.directory-card:hover .directory-action {
+  color: var(--orange);
+}
+
+.directory-card:hover .directory-action span {
+  transform: translateX(5px);
+}
+
+@media (max-width: 767px) {
+  .home-directory-links {
+    margin-top: 2rem;
+    gap: 0.75rem;
+    background: transparent;
+    border: 0;
+  }
+
+  .directory-card {
+    min-height: 190px;
+    border: 1px solid var(--border);
+  }
+
+  .directory-copy {
+    padding-right: 3rem;
+  }
+}
