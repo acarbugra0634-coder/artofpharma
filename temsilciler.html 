@@ -72,7 +72,7 @@
       </div>
 
       <div class="rep-summary reveal">
-        <span>50</span>
+        <span>52</span>
         <div>
           <strong>Üniversite Temsilcisi</strong>
           <p>TÜRKİYE • KKTC • AZERBAYCAN</p>
@@ -90,341 +90,355 @@
         <article class="rep-card reveal">
           <span class="rep-number">02</span>
           <div class="rep-card-copy">
+            <p class="rep-school">Adıyaman Üniversitesi</p>
+            <h3>Yeliz Nur Yeşiltaş</h3>
+          </div>
+        </article>
+        <article class="rep-card reveal">
+          <span class="rep-number">03</span>
+          <div class="rep-card-copy">
             <p class="rep-school">Afyonkarahisar Sağlık Bilimleri Üniversitesi</p>
             <h3>İzan Ayanoğlu</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">03</span>
+          <span class="rep-number">04</span>
           <div class="rep-card-copy">
             <p class="rep-school">Ağrı İbrahim Çeçen Üniversitesi</p>
             <h3>Tajdin Apak</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">04</span>
+          <span class="rep-number">05</span>
           <div class="rep-card-copy">
             <p class="rep-school">Anadolu Üniversitesi</p>
             <h3>Kevser Aydoğdu</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">05</span>
+          <span class="rep-number">06</span>
           <div class="rep-card-copy">
             <p class="rep-school">Ankara Medipol Üniversitesi</p>
             <h3>Bora Tetik</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">06</span>
+          <span class="rep-number">07</span>
           <div class="rep-card-copy">
             <p class="rep-school">Ankara Üniversitesi</p>
             <h3>Zehranur Ayyıldız</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">07</span>
+          <span class="rep-number">08</span>
           <div class="rep-card-copy">
             <p class="rep-school">Azerbaycan Tıp Üniversitesi</p>
             <h3>Efe Aldemir</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">08</span>
+          <span class="rep-number">09</span>
           <div class="rep-card-copy">
             <p class="rep-school">Atatürk Üniversitesi</p>
             <h3>Eylül Arslan</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">09</span>
+          <span class="rep-number">10</span>
           <div class="rep-card-copy">
             <p class="rep-school">Başkent Üniversitesi</p>
             <h3>Ece Karakaya</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">10</span>
+          <span class="rep-number">11</span>
           <div class="rep-card-copy">
             <p class="rep-school">Bezmiâlem Vakıf Üniversitesi</p>
             <h3>Kayra İncedalkesen</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">11</span>
+          <span class="rep-number">12</span>
           <div class="rep-card-copy">
             <p class="rep-school">Biruni Üniversitesi</p>
             <h3>Tuğba Erdoğan</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">12</span>
+          <span class="rep-number">13</span>
           <div class="rep-card-copy">
             <p class="rep-school">Çukurova Üniversitesi</p>
             <h3>Didenaz İşoğlu</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">13</span>
+          <span class="rep-number">14</span>
           <div class="rep-card-copy">
             <p class="rep-school">Dicle Üniversitesi</p>
             <h3>Kübra Gönül</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">14</span>
+          <span class="rep-number">15</span>
           <div class="rep-card-copy">
             <p class="rep-school">Düzce Üniversitesi</p>
             <h3>Elifgül Sarı</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">15</span>
+          <span class="rep-number">16</span>
           <div class="rep-card-copy">
             <p class="rep-school">Doğu Akdeniz Üniversitesi</p>
             <h3>Deniz Sude Cömert</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">16</span>
+          <span class="rep-number">17</span>
           <div class="rep-card-copy">
             <p class="rep-school">Ege Üniversitesi</p>
             <h3>İlkim Kayra Kumbasar</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">17</span>
+          <span class="rep-number">18</span>
           <div class="rep-card-copy">
             <p class="rep-school">Erciyes Üniversitesi</p>
             <h3>Elif Zehra Çam</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">18</span>
+          <span class="rep-number">19</span>
           <div class="rep-card-copy">
             <p class="rep-school">Fenerbahçe Üniversitesi</p>
             <h3>Ediz Altun</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">19</span>
+          <span class="rep-number">20</span>
           <div class="rep-card-copy">
             <p class="rep-school">Fırat Üniversitesi</p>
             <h3>Ayşegül Tanrıkulu</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">20</span>
+          <span class="rep-number">21</span>
           <div class="rep-card-copy">
             <p class="rep-school">Gazi Üniversitesi</p>
             <h3>Şevval Ünsal</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">21</span>
+          <span class="rep-number">22</span>
           <div class="rep-card-copy">
             <p class="rep-school">Girne Amerikan Üniversitesi</p>
             <h3>Sıla Torun</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">22</span>
+          <span class="rep-number">23</span>
           <div class="rep-card-copy">
             <p class="rep-school">Hacettepe Üniversitesi</p>
             <h3>Havva Nur Özcan</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">23</span>
+          <span class="rep-number">24</span>
           <div class="rep-card-copy">
             <p class="rep-school">Harran Üniversitesi</p>
             <h3>Sinem Aslan</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">24</span>
+          <span class="rep-number">25</span>
           <div class="rep-card-copy">
             <p class="rep-school">İstanbul Aydın Üniversitesi</p>
             <h3>Hüseyin Kaplan</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">25</span>
+          <span class="rep-number">26</span>
           <div class="rep-card-copy">
             <p class="rep-school">İstanbul Kent Üniversitesi</p>
             <h3>Melike Hilal Demirtaş</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">26</span>
+          <span class="rep-number">27</span>
           <div class="rep-card-copy">
             <p class="rep-school">İstanbul Medipol Üniversitesi</p>
             <h3>Aslıhan Özdemir</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">27</span>
+          <span class="rep-number">28</span>
           <div class="rep-card-copy">
             <p class="rep-school">İstanbul Sağlık Bilimleri Üniversitesi</p>
             <h3>Feyza Arıkboğa</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">28</span>
+          <span class="rep-number">29</span>
           <div class="rep-card-copy">
             <p class="rep-school">İstanbul Sağlık ve Teknoloji Üniversitesi</p>
             <h3>Sedanur Demir</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">29</span>
+          <span class="rep-number">30</span>
           <div class="rep-card-copy">
             <p class="rep-school">İstanbul Üniversitesi</p>
             <h3>Ayşenur Arıcı</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">30</span>
+          <span class="rep-number">31</span>
           <div class="rep-card-copy">
             <p class="rep-school">İstanbul Üniversitesi Cerrahpaşa İngilizce</p>
             <h3>Gizem Rodop</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">31</span>
+          <span class="rep-number">32</span>
+          <div class="rep-card-copy">
+            <p class="rep-school">İstanbul Yeni Yüzyıl Üniversitesi</p>
+            <h3>Hacer Özmen</h3>
+          </div>
+        </article>
+        <article class="rep-card reveal">
+          <span class="rep-number">33</span>
           <div class="rep-card-copy">
             <p class="rep-school">İstinye Üniversitesi</p>
             <h3>Pelin Aladağ</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">32</span>
+          <span class="rep-number">34</span>
           <div class="rep-card-copy">
             <p class="rep-school">İzmir Katip Çelebi Üniversitesi</p>
             <h3>Esma Kızgınyürek</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">33</span>
+          <span class="rep-number">35</span>
           <div class="rep-card-copy">
             <p class="rep-school">Karadeniz Teknik Üniversitesi</p>
             <h3>Gizem Cingöz</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">34</span>
+          <span class="rep-number">36</span>
           <div class="rep-card-copy">
             <p class="rep-school">Kocaeli Sağlık ve Teknoloji Üniversitesi</p>
             <h3>Melike Sobi</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">35</span>
+          <span class="rep-number">37</span>
           <div class="rep-card-copy">
             <p class="rep-school">Lokman Hekim Üniversitesi</p>
             <h3>Zeynep Buket Dansık</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">36</span>
+          <span class="rep-number">38</span>
           <div class="rep-card-copy">
             <p class="rep-school">Marmara Üniversitesi</p>
             <h3>Merve Sıla Ece</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">37</span>
+          <span class="rep-number">39</span>
           <div class="rep-card-copy">
             <p class="rep-school">Mersin Üniversitesi</p>
             <h3>Helin Karavar</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">38</span>
+          <span class="rep-number">40</span>
           <div class="rep-card-copy">
             <p class="rep-school">Nahçıvan Devlet Üniversitesi</p>
             <h3>Asadova Mehrana</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">39</span>
+          <span class="rep-number">41</span>
           <div class="rep-card-copy">
             <p class="rep-school">Yakın Doğu Üniversitesi</p>
             <h3>Niysa Şahin</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">40</span>
+          <span class="rep-number">42</span>
           <div class="rep-card-copy">
             <p class="rep-school">Sağlık Bilimleri Üniversitesi Gülhane</p>
             <h3>Okyanus Irmak Ucal</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">41</span>
+          <span class="rep-number">43</span>
           <div class="rep-card-copy">
             <p class="rep-school">Selçuk Üniversitesi</p>
             <h3>Meryem Şenoğlu</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">42</span>
+          <span class="rep-number">44</span>
           <div class="rep-card-copy">
             <p class="rep-school">Sivas Cumhuriyet Üniversitesi</p>
             <h3>Aytuna Başak Bektaş</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">43</span>
+          <span class="rep-number">45</span>
           <div class="rep-card-copy">
             <p class="rep-school">Tokat Gaziosmanpaşa Üniversitesi</p>
             <h3>Feyza Kalkan</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">44</span>
+          <span class="rep-number">46</span>
           <div class="rep-card-copy">
             <p class="rep-school">Trakya Üniversitesi</p>
             <h3>Tuğsem Saygı</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">45</span>
+          <span class="rep-number">47</span>
           <div class="rep-card-copy">
             <p class="rep-school">Uluslararası Kıbrıs Üniversitesi</p>
             <h3>Yusuf Tuna Erkan</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">46</span>
+          <span class="rep-number">48</span>
           <div class="rep-card-copy">
             <p class="rep-school">Van Yüzüncü Yıl Üniversitesi</p>
             <h3>Emir Taha Bayrak</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">47</span>
+          <span class="rep-number">49</span>
           <div class="rep-card-copy">
             <p class="rep-school">Yeditepe Üniversitesi</p>
             <h3>Beyza İlayda Akdemir</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">48</span>
+          <span class="rep-number">50</span>
           <div class="rep-card-copy">
             <p class="rep-school">Altınbaş Üniversitesi</p>
             <h3>Özlem Tiryaki</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">49</span>
+          <span class="rep-number">51</span>
           <div class="rep-card-copy">
             <p class="rep-school">İnönü Üniversitesi</p>
             <h3>Senanur Algül</h3>
           </div>
         </article>
         <article class="rep-card reveal">
-          <span class="rep-number">50</span>
+          <span class="rep-number">52</span>
           <div class="rep-card-copy">
             <p class="rep-school">Zonguldak Bülent Ecevit Üniversitesi</p>
             <h3>Özlem Solak</h3>
