@@ -2690,3 +2690,29 @@ button {
     padding-right: 3rem;
   }
 }
+/* ONPHAKON Partner Tags */
+.partner-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1rem;
+}
+
+.partner-tags span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.32rem 0.65rem;
+  border: 1px solid rgba(232,65,24,0.35);
+  background: rgba(232,65,24,0.12);
+  color: rgba(13,13,13,0.72);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.etkinlik-kart--featured .partner-tags span {
+  color: rgba(245,243,238,0.72);
+  border-color: rgba(232,65,24,0.45);
+  background: rgba(232,65,24,0.12);
+}
