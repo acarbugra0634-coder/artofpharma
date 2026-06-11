@@ -2792,3 +2792,13 @@ button {
 .stats-marquee .stat-divider {
   display: none !important;
 }
+@media (max-width: 768px) {
+  .stats-marquee .stats-set {
+    gap: 1.8rem !important;
+    padding-right: 2rem !important;
+  }
+
+  .stats-marquee .stat-item {
+    min-width: 100px !important;
+  }
+}
