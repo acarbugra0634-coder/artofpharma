@@ -2736,32 +2736,3 @@ button {
   background:var(--orange);
   color:var(--near-black);
 }
-.stats-bar {
-  overflow: hidden;
-}
-
-.stats-inner.stats-track {
-  display: flex !important;
-  width: max-content !important;
-  animation: statsLoop 28s linear infinite !important;
-}
-
-.stats-set {
-  display: flex;
-  flex: 0 0 auto;
-}
-
-.stats-set .stat-item,
-.stats-set .stat-divider {
-  flex: 0 0 auto;
-}
-
-@keyframes statsLoop {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-}
