@@ -2754,6 +2754,7 @@ button {
 .stats-set {
   display: flex;
   flex: 0 0 auto;
+  gap: 4rem;
 }
 
 .stats-set .stat-item,
