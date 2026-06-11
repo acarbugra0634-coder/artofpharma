@@ -2736,3 +2736,37 @@ button {
   background:var(--orange);
   color:var(--near-black);
 }
+/* Smooth looping stats bar */
+.stats-bar {
+  overflow: hidden;
+}
+
+.stats-marquee {
+  display: flex;
+  width: max-content;
+  animation: statsMarquee 32s linear infinite;
+}
+
+.stats-marquee:hover {
+  animation-play-state: paused;
+}
+
+.stats-set {
+  display: flex;
+  flex: 0 0 auto;
+}
+
+.stats-set .stat-item,
+.stats-set .stat-divider {
+  flex: 0 0 auto;
+}
+
+@keyframes statsMarquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
