@@ -2736,24 +2736,23 @@ button {
   background:var(--orange);
   color:var(--near-black);
 }
-/* Smooth looping stats bar */
 .stats-bar {
   overflow: hidden;
 }
 
 .stats-inner.stats-track {
   display: flex !important;
-  flex-wrap: nowrap !important;
   width: max-content !important;
-  animation: statsLoop 18s linear infinite !important;
+  animation: statsLoop 28s linear infinite !important;
 }
 
-.stats-inner.stats-track:hover {
-  animation-play-state: paused;
+.stats-set {
+  display: flex;
+  flex: 0 0 auto;
 }
 
-.stats-inner.stats-track .stat-item,
-.stats-inner.stats-track .stat-divider {
+.stats-set .stat-item,
+.stats-set .stat-divider {
   flex: 0 0 auto;
 }
 
@@ -2763,6 +2762,6 @@ button {
   }
 
   to {
-    transform: translateX(-30%);
+    transform: translateX(-50%);
   }
 }
