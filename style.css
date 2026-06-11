@@ -2775,3 +2775,20 @@ button {
     transform: translateX(-50%);
   }
 }
+/* FINAL FIX - Stats marquee spacing */
+.stats-marquee .stats-set {
+  display: flex !important;
+  flex: 0 0 auto !important;
+  gap: 7rem !important;
+  padding-right: 7rem !important;
+}
+
+.stats-marquee .stat-item {
+  min-width: 230px !important;
+  flex: 0 0 auto !important;
+  text-align: center;
+}
+
+.stats-marquee .stat-divider {
+  display: none !important;
+}
