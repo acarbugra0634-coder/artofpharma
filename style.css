@@ -2716,3 +2716,23 @@ button {
   border-color: rgba(232,65,24,0.45);
   background: rgba(232,65,24,0.12);
 }
+.rep-apply-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  margin-top:1rem;
+  padding:.8rem 1.2rem;
+  border:1px solid var(--orange);
+  color:var(--off-white);
+  text-decoration:none;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:.75rem;
+  font-weight:600;
+  transition:.25s ease;
+}
+
+.rep-apply-btn:hover{
+  background:var(--orange);
+  color:var(--near-black);
+}
