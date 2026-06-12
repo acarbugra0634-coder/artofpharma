@@ -256,3 +256,11 @@ if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) {
     }, { passive: true });
   });
 }
+// Subtle background parallax
+document.addEventListener("mousemove", (event) => {
+  const x = (event.clientX / window.innerWidth - 0.5) * 10;
+  const y = (event.clientY / window.innerHeight - 0.5) * 10;
+
+  document.documentElement.style.setProperty("--grid-x", `${x}px`);
+  document.documentElement.style.setProperty("--grid-y", `${y}px`);
+});
