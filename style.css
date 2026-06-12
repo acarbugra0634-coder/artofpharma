@@ -2802,3 +2802,19 @@ button {
     min-width: 100px !important;
   }
 }
+/* Logo fade-in */
+.nav-logo {
+  animation: logoFadeIn 0.8s ease both;
+}
+
+@keyframes logoFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
