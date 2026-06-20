@@ -2823,3 +2823,107 @@ body::before {
   transform: translate(var(--grid-x, 0px), var(--grid-y, 0px));
   transition: transform 0.18s ease-out;
 }
+/* Yenilikler Section */
+.yenilikler {
+  background: var(--near-black);
+}
+
+.yenilik-card {
+  border: 1px solid rgba(232,65,24,0.35);
+  background:
+    radial-gradient(circle at 12% 20%, rgba(232,65,24,0.16), transparent 32%),
+    linear-gradient(135deg, rgba(245,243,238,0.045), rgba(245,243,238,0.012));
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.yenilik-card::after {
+  content: "NEW";
+  position: absolute;
+  right: -0.04em;
+  bottom: -0.25em;
+  font-family: var(--font-display);
+  font-size: clamp(6rem, 16vw, 13rem);
+  line-height: 1;
+  color: rgba(245,243,238,0.045);
+  pointer-events: none;
+}
+
+.yenilik-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+}
+
+.yenilik-badge {
+  display: inline-flex;
+  margin-bottom: 0.8rem;
+  color: var(--orange);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.yenilik-card h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 6vw, 5.2rem);
+  line-height: 0.92;
+  letter-spacing: 0.03em;
+  color: var(--light-text);
+  margin-bottom: 0.9rem;
+}
+
+.yenilik-card p {
+  color: rgba(245,243,238,0.62);
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+.yenilik-btn {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.35rem;
+  border: 1px solid var(--orange);
+  background: var(--orange);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.yenilik-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 44px rgba(232,65,24,0.32);
+}
+
+.yenilik-btn span {
+  transition: transform var(--transition-fast);
+}
+
+.yenilik-btn:hover span {
+  transform: translateX(5px);
+}
+
+@media (max-width: 767px) {
+  .yenilik-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .yenilik-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
