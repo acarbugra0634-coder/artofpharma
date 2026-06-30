@@ -2913,3 +2913,6 @@ body::before {
     justify-content: center;
   }
 }
+.yenilik-card + .yenilik-card {
+  margin-top: 1rem;
+}
