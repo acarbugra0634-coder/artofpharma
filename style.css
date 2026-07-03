@@ -2916,3 +2916,43 @@ body::before {
 .yenilik-card + .yenilik-card {
   margin-top: 1rem;
 }
+.board-cta{
+    margin:2rem 0 4rem;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:1rem;
+}
+
+.board-cta p{
+    color:rgba(245,243,238,.7);
+    font-size:1rem;
+}
+
+.board-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:.6rem;
+    padding:.95rem 1.6rem;
+    background:var(--orange);
+    color:#fff;
+    border:1px solid var(--orange);
+    text-decoration:none;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    transition:.25s;
+}
+
+.board-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 28px rgba(232,65,24,.35);
+}
+
+.board-btn span{
+    transition:.25s;
+}
+
+.board-btn:hover span{
+    transform:translateX(4px);
+}
