@@ -7,7 +7,6 @@
 // ─── Hamburger / Mobile Menu ─────────────────
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
-
 function toggleMenu(open) {
   hamburger.classList.toggle('open', open);
   mobileMenu.classList.toggle('open', open);
@@ -19,7 +18,6 @@ hamburger.addEventListener('click', () => {
   const isOpen = hamburger.classList.contains('open');
   toggleMenu(!isOpen);
 });
-
 // Close menu on mobile link click
 document.querySelectorAll('.mobile-nav-link').forEach(link => {
   link.addEventListener('click', () => toggleMenu(false));
@@ -32,7 +30,6 @@ document.addEventListener('click', (e) => {
   }
 });
 
-
 // ─── Sticky Header Shadow ────────────────────
 const header = document.getElementById('site-header');
 window.addEventListener('scroll', () => {
@@ -43,7 +40,6 @@ window.addEventListener('scroll', () => {
 // ─── Active Nav Link on Scroll ───────────────
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link[data-section]');
-
 function setActiveNav() {
   let current = '';
   sections.forEach(section => {
@@ -61,7 +57,6 @@ setActiveNav();
 
 // ─── Scroll Reveal (IntersectionObserver) ────
 const revealElements = document.querySelectorAll('.reveal');
-
 if ('IntersectionObserver' in window) {
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -78,7 +73,6 @@ if ('IntersectionObserver' in window) {
   revealElements.forEach(el => el.classList.add('visible'));
 }
 
-
 // ─── Etkinlik Tabs ───────────────────────────
 const tabs = document.querySelectorAll('.etkinlik-tab');
 const panels = document.querySelectorAll('.etkinlik-panel');
@@ -92,7 +86,6 @@ tabs.forEach(tab => {
       t.setAttribute('aria-selected', 'false');
     });
     panels.forEach(p => p.classList.remove('active'));
-
     tab.classList.add('active');
     tab.setAttribute('aria-selected', 'true');
 
@@ -105,7 +98,6 @@ tabs.forEach(tab => {
       });
     }
   });
-
   // Keyboard navigation for tabs
   tab.addEventListener('keydown', (e) => {
     const tabList = [...tabs];
@@ -118,7 +110,6 @@ tabs.forEach(tab => {
   });
 });
 
-
 // ─── Stats Counter Animation ─────────────────
 function animateCounter(el) {
   const target = parseFloat(el.dataset.target);
@@ -126,7 +117,6 @@ function animateCounter(el) {
   const decimals = parseInt(el.dataset.decimal || '0', 10);
   const duration = 1800;
   const startTime = performance.now();
-
   function update(currentTime) {
     const elapsed = currentTime - startTime;
     const progress = Math.min(elapsed / duration, 1);
@@ -144,7 +134,6 @@ function animateCounter(el) {
 
   requestAnimationFrame(update);
 }
-
 // Trigger counters when stats bar is visible
 const statsBar = document.querySelector('.stats-bar');
 if (statsBar && 'IntersectionObserver' in window) {
@@ -160,7 +149,6 @@ if (statsBar && 'IntersectionObserver' in window) {
   statsObserver.observe(statsBar);
 }
 
-
 // ─── Smooth Scroll for Anchor Links ──────────
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', (e) => {
@@ -174,7 +162,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     window.scrollTo({ top, behavior: 'smooth' });
   });
 });
-
 
 // ─── Magical Cursor (Desktop Only) ───────────
 (() => {
@@ -190,7 +177,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   let mouseY = window.innerHeight / 2;
   let cursorX = mouseX;
   let cursorY = mouseY;
-
   const render = () => {
     cursorX += (mouseX - cursorX) * 0.18;
     cursorY += (mouseY - cursorY) * 0.18;
@@ -200,7 +186,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
     requestAnimationFrame(render);
   };
-
   window.addEventListener('mousemove', (event) => {
     mouseX = event.clientX;
     mouseY = event.clientY;
@@ -214,7 +199,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   window.addEventListener('mouseenter', () => {
     document.body.classList.add('cursor-ready');
   });
-
   document.querySelectorAll('a, button, .etkinlik-kart, .social-btn, .iletisim-kanal, .radix-sayi').forEach(el => {
     el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hovering'));
     el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hovering'));
@@ -226,7 +210,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // ─── Mobile Bottom Nav Active State ──────────
 const mobileBottomLinks = document.querySelectorAll('.mobile-bottom-link');
-
 function setActiveBottomNav() {
   if (!mobileBottomLinks.length) return;
   let current = '';
@@ -243,14 +226,12 @@ function setActiveBottomNav() {
 
 window.addEventListener('scroll', setActiveBottomNav, { passive: true });
 setActiveBottomNav();
-
 // ─── Mobile Touch Motion Feedback ────────────
 if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) {
   document.querySelectorAll('.etkinlik-kart, .founder-timeline-item, .iletisim-kanal').forEach(card => {
     card.addEventListener('touchstart', () => {
       card.classList.add('touch-active');
     }, { passive: true });
-
     card.addEventListener('touchend', () => {
       setTimeout(() => card.classList.remove('touch-active'), 160);
     }, { passive: true });
@@ -264,3 +245,58 @@ document.addEventListener("mousemove", (event) => {
   document.documentElement.style.setProperty("--grid-x", `${x}px`);
   document.documentElement.style.setProperty("--grid-y", `${y}px`);
 });
+
+
+// ═══════════════════════════════════════════════
+// ART OF PHARMA — DAY / NIGHT THEME
+// Injected dynamically so every page using main.js gets the same toggle.
+// ═══════════════════════════════════════════════
+(() => {
+  const root = document.documentElement;
+  const STORAGE_KEY = 'aop-theme';
+
+  let savedTheme = 'dark';
+  try {
+    savedTheme = localStorage.getItem(STORAGE_KEY) || 'dark';
+  } catch (_) {}
+  root.setAttribute('data-theme', savedTheme);
+
+  const nav = document.querySelector('.nav-container');
+  if (!nav || document.getElementById('theme-toggle')) return;
+
+  const button = document.createElement('button');
+  button.id = 'theme-toggle';
+  button.className = 'theme-toggle';
+  button.type = 'button';
+  button.innerHTML = `
+    <span class="theme-toggle-icon theme-toggle-sun" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+      </svg>
+    </span>
+    <span class="theme-toggle-icon theme-toggle-moon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"></path>
+      </svg>
+    </span>`;
+
+  const updateLabel = () => {
+    const isDark = root.getAttribute('data-theme') !== 'light';
+    button.setAttribute('aria-label', isDark ? 'Gündüz moduna geç' : 'Gece moduna geç');
+    button.title = isDark ? 'Gündüz modu' : 'Gece modu';
+  };
+
+  const hamburgerButton = nav.querySelector('.hamburger');
+  if (hamburgerButton) nav.insertBefore(button, hamburgerButton);
+  else nav.appendChild(button);
+
+  updateLabel();
+
+  button.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem(STORAGE_KEY, next); } catch (_) {}
+    updateLabel();
+  });
+})();
