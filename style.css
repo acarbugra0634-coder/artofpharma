@@ -3256,3 +3256,53 @@ html[data-theme="light"] .mobile-bottom-link.active {
     margin-right: .55rem;
   }
 }
+/* ─── Desktop Navigation — News of Pharma Fit ─── */
+@media (min-width: 1024px) {
+
+  .nav-container {
+    width: calc(100% - 40px);
+    max-width: 1600px;
+    margin: 0 auto;
+    gap: clamp(1rem, 1.6vw, 2rem);
+  }
+
+  .nav-logo {
+    flex-shrink: 0;
+  }
+
+  .nav-links {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(0.65rem, 1.2vw, 1.4rem);
+    min-width: 0;
+  }
+
+  .nav-link {
+    white-space: nowrap;
+    font-size: clamp(0.68rem, 0.78vw, 0.82rem);
+    letter-spacing: 0.08em;
+  }
+
+  .theme-toggle {
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+  }
+}
+/* Orta boy laptoplarda logoyu biraz kompaktlaştır */
+@media (min-width: 1024px) and (max-width: 1280px) {
+
+  .logo-text {
+    font-size: 0.9rem;
+  }
+
+  .nav-links {
+    gap: 0.6rem;
+  }
+
+  .nav-link {
+    font-size: 0.67rem;
+    letter-spacing: 0.06em;
+  }
+}
