@@ -256,17 +256,11 @@ if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) {
     }, { passive: true });
   });
 }
+// Subtle background parallax
+document.addEventListener("mousemove", (event) => {
+  const x = (event.clientX / window.innerWidth - 0.5) * 10;
+  const y = (event.clientY / window.innerHeight - 0.5) * 10;
 
-// AOP theme toggle
-(function(){
-  const root=document.documentElement;
-  const btn=document.getElementById('theme-toggle');
-  const current=()=>root.getAttribute('data-theme')||'dark';
-  const apply=(t,save=true)=>{
-    root.setAttribute('data-theme',t);
-    if(save){try{localStorage.setItem('aop-theme',t)}catch(e){}}
-    if(btn) btn.setAttribute('aria-label',t==='dark'?'Gündüz moduna geç':'Gece moduna geç');
-  };
-  apply(current(),false);
-  if(btn) btn.addEventListener('click',()=>apply(current()==='dark'?'light':'dark'));
-})();
+  document.documentElement.style.setProperty("--grid-x", `${x}px`);
+  document.documentElement.style.setProperty("--grid-y", `${y}px`);
+});
