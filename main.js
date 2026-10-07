@@ -300,9 +300,6 @@ document.addEventListener("mousemove", (event) => {
     updateLabel();
   });
 })();
-
-})();
- 
  
 /* =========================================
    ONPHAKON III COUNTDOWN
