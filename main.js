@@ -300,3 +300,77 @@ document.addEventListener("mousemove", (event) => {
     updateLabel();
   });
 })();
+
+})();
+ 
+ 
+/* =========================================
+   ONPHAKON III COUNTDOWN
+========================================= */
+
+const ONPHAKON_III_COUNTDOWN_ENABLED = true;
+
+// Tarih açıklandığında buraya etkinlik tarihini gir.
+// Örnek: "2026-12-20T19:00:00+03:00"
+const ONPHAKON_III_DATE = "2026-12-11T18:00:00+03:00";
+
+const onphakonCountdown = document.getElementById("onphakonCountdown");
+const upcomingEmpty = document.querySelector(".yaklasan-empty");
+
+function startOnphakonCountdown() {
+
+  if (!ONPHAKON_III_COUNTDOWN_ENABLED || !ONPHAKON_III_DATE) {
+    return;
+  }
+
+  const eventDate = new Date(ONPHAKON_III_DATE).getTime();
+
+  if (upcomingEmpty) {
+    upcomingEmpty.style.display = "none";
+  }
+
+  if (onphakonCountdown) {
+    onphakonCountdown.hidden = false;
+  }
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    if (distance <= 0) {
+      document.getElementById("countdownDays").textContent = "00";
+      document.getElementById("countdownHours").textContent = "00";
+      document.getElementById("countdownMinutes").textContent = "00";
+      document.getElementById("countdownSeconds").textContent = "00";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    const minutes = Math.floor(
+      (distance % (1000 * 60 * 60)) / (1000 * 60)
+    );
+    const seconds = Math.floor(
+      (distance % (1000 * 60)) / 1000
+    );
+
+    document.getElementById("countdownDays").textContent =
+      String(days).padStart(2, "0");
+
+    document.getElementById("countdownHours").textContent =
+      String(hours).padStart(2, "0");
+
+    document.getElementById("countdownMinutes").textContent =
+      String(minutes).padStart(2, "0");
+
+    document.getElementById("countdownSeconds").textContent =
+      String(seconds).padStart(2, "0");
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+}
+
+startOnphakonCountdown();

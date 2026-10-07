@@ -974,6 +974,78 @@ button {
   max-width: 360px;
 }
 
+/* ONPHAKON III Countdown */
+.onphakon-countdown {
+  padding: 4rem 2rem 5rem;
+  text-align: center;
+}
+
+.onphakon-label {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  letter-spacing: 0.08em;
+  color: var(--near-black);
+  margin-bottom: 2rem;
+}
+
+.countdown-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(0.7rem, 2vw, 1.5rem);
+  flex-wrap: wrap;
+}
+
+.countdown-item {
+  width: clamp(75px, 12vw, 125px);
+  padding: 1.4rem 0.8rem;
+  border: 2px solid var(--orange);
+  border-radius: 4px;
+  background: transparent;
+}
+
+.countdown-item span {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1;
+  color: var(--orange);
+}
+
+.countdown-item small {
+  display: block;
+  margin-top: 0.7rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--near-black);
+}
+
+@media (max-width: 600px) {
+  .onphakon-countdown {
+    padding: 3rem 0.5rem;
+  }
+
+  .countdown-wrapper {
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+  }
+
+  .countdown-item {
+    width: 22%;
+    padding: 1rem 0.25rem;
+  }
+
+  .countdown-item span {
+    font-size: clamp(1.6rem, 8vw, 2.4rem);
+  }
+
+  .countdown-item small {
+    font-size: 0.55rem;
+    letter-spacing: 0.06em;
+  }
+}
+
 /* Primary Button */
 .btn-primary {
   display: inline-flex;
